@@ -1,6 +1,6 @@
 # My Firefox Theme
  
-Welcome to the repo for my Firefox theme, a theme that aims to look nice and clean while not compromising functionality
+Welcome to the repo for my Firefox theme, a theme that aims to look nice and clean while not compromising functionality.
 
 ![Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/screenshot.png)
 
@@ -12,26 +12,21 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 
 1. Copy the files from [firefox/userchrome](firefox/userchrome) into the ```chrome``` folder (doesn't exist by default) in your Firefox profile directory. To find your profile directory, go to about:support.
 2. Go to about:config, agree that you are responsible for everything horrible you are going to do next.
-3. Set the following preferences:
-
-Preference to set | Value to set it to
------------------ | ------------------
-```toolkit.legacyUserProfileCustomizations.stylesheets``` | ```true```
-```svg.context-properties.content.enabled``` | ```true```
-
-4. Restart Firefox.
+3. Set ```toolkit.legacyUserProfileCustomizations.stylesheets``` to ```true```.
+4. Set ```svg.context-properties.content.enabled``` to ```true```.
+5. Restart Firefox.
 
 ### Optional
 The toolbar layout i use:
 ![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png)
 
-> The .css files have **a lot** of ~~dead~~ commented out styles, you can lurk around and potentially find something you like, or, just remove all of them and minify the files, if that's what you like
+> The .css files have **a lot** of ~~dead~~ commented out styles, you can lurk around and potentially find something you like, or just remove all of them and minify the files, if that's what you like.
 
 ## Tree Style Tabs
 
 > [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 
-1. Set the main settings (important ones are underlined) like so: [Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png)
+1. Set the main settings (important ones are underlined) like so: [Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
 2. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
 
 ## Reddit Theme
