@@ -2,7 +2,7 @@
  
 Welcome to the repo for my Firefox theme, a theme that aims to look nice and clean while not compromising functionality.
 
-![Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/screenshots/screenshot.png)
 
 # Installation
 
