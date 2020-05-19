@@ -19,6 +19,8 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 5. Restart Firefox.
 
 ### Optional
+Download and install [Google Sans](https://www.google.com/search?q=Google+Sans).
+
 The toolbar layout i use:
 ![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png)
 
