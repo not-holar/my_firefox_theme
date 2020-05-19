@@ -21,20 +21,18 @@ Preference to set | Value to set it to
 
 4. Restart Firefox.
 
-> The .css files have a lot of ~~dead~~ commented out styles, you can lurk around and potentially find something you like, or, just remove all of them and minify the files, if that's what you like
-
-(Optional) The toolbar layout i use:
+### Optional
+The toolbar layout i use:
 ![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png)
+
+> The .css files have **a lot** of ~~dead~~ commented out styles, you can lurk around and potentially find something you like, or, just remove all of them and minify the files, if that's what you like
 
 ## Tree Style Tabs
 
 > [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 
-* Main settings (Important ones are underlined):
-![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png)
-
-* Then scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) here:
-![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png)
+1. Set the main settings (important ones are underlined) like so: [Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png)
+2. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
 
 ## Reddit Theme
 
