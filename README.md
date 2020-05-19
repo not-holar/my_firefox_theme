@@ -4,6 +4,8 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 
 ![Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/screenshots/screenshot.png)
 
+[See More Screenshots](SCREENSHOTS.md)
+
 # Installation
 
 ## Firefox
@@ -26,7 +28,7 @@ The toolbar layout i use:
 
 > [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 
-1. Set the main settings (important ones are underlined) like so: [Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
+1. Set the main settings (important ones are underlined) like so: [Settings Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
 2. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
 
 ## Reddit Theme
