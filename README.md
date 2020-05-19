@@ -26,10 +26,9 @@ The toolbar layout i use:
 
 ## Tree Style Tabs
 
-> [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
-
-1. Set the main settings (important ones are underlined) like so: [Settings Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
-2. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
+1. [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/).
+2. Set the main settings (important ones are underlined) like so: [Settings Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
+3. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
 
 ## Reddit Theme
 
