@@ -18,7 +18,7 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 3. Set ```svg.context-properties.content.enabled``` to ```true```.
 4. Restart Firefox.
 
-(Optional) The toolbar layout i use:
+*(Optional) The toolbar layout i use:*
 <p align="center">
 	<img src="https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png" alt="Toolbar Layout Screenshot">
 </p>
@@ -27,10 +27,10 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 
 [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/)
 
-Main settings (Important ones are underlined):
+*Main settings (Important ones are underlined):*
 <img src="https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png">
 
-Then scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) here:
+*Then scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) here:*
 <img src="https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png">
 
 ### Reddit Theme
