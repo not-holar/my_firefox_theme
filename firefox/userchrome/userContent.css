@@ -1,0 +1,97 @@
+:root {
+	--acrylic-backdrop-filter: blur(10px);
+	--acrylic-background-blend-mode: exclusion;
+	--acrylic-background-image: url("chrome://global/skin/media/imagedoc-lightnoise.png");
+}
+
+:root {
+	font-family: 'Google Sans', 'Open Sans', sans-serif, 'Noto Sans', 'Twemoji Mozilla', 'Twitter Emoji Color', 'Segoe UI Emoji';
+}
+
+:root {
+	scrollbar-color: hsla(0, 0%, 33%, 0.5) hsla(0, 0%, 0%, 0.1) !important;
+}
+
+:root, * {
+	scrollbar-width: thin !important;
+}
+
+/* :root::before {
+    content: '';
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 8px;
+	z-index: 1;
+	background-color: hsla(0, 0%, 0%, 0.1);
+	background-image: var(--acrylic-background-image) repeat repeat !important;
+	backdrop-filter: var(--acrylic-backdrop-filter) !important;
+	background-blend-mode: var(--acrylic-background-blend-mode) !important;
+	scrollbar-color: hsla(0, 0%, 33%, 0.5) transparent !important;
+	scrollbar-width: thin !important;
+} */
+
+scrollbar {
+	scrollbar-color: hsla(0, 0%, 33%, 0.5) transparent !important;
+	scrollbar-width: thin !important;
+	background-color: hsla(0, 0%, 0%, 0.1);
+	background-image: var(--acrylic-background-image) repeat repeat !important;
+	backdrop-filter: var(--acrylic-backdrop-filter) !important;
+	background-blend-mode: var(--acrylic-background-blend-mode) !important;
+}
+
+/* for about:'pages')*/
+@-moz-document url-prefix('about:') {
+	window,
+	page,
+	html,
+	.main-content,
+	scrollbar {
+		scrollbar-color: hsla(0, 0%, 33%, 0.5) hsla(0, 0%, 0%, 0.1) !important;
+		scrollbar-width: thin !important;
+	}
+}
+
+@-moz-document url-prefix('about:reader') {
+	* {
+		box-sizing: border-box;
+		word-spacing: .25em;
+	}
+	body.sans-serif {
+		font-family: 'Open Sans', 'Noto Sans', Arial, sans-serif !important;
+		line-height: 1.5em;
+	}
+	body.serif {
+		font-family: serif, 'Book Antiqua' !important;
+	}
+	body.sans-serif, body.serif {
+		padding-bottom: 75vh !important;
+	}
+	body.sans-serif p, body.serif p {
+		text-indent: 20px !important;
+	}
+}
+.top-sites {
+	--newtab-topsites-background-color: var(--newtab-background-color);
+}
+.top-sites .top-site-icon.rich-icon,
+.top-sites .top-sites-list .top-site-outer .tile {
+	box-shadow: none !important;
+}
+.top-site-outer .screenshot {
+	box-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.1) !important;
+}
+.top-site-outer .default-icon {
+	border-radius: 50% !important;
+	background-size: 64% !important;
+	background-color: white !important;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.2) !important;
+}
+body.activity-stream .top-sites .section-top-bar {
+	height: unset !important;
+	margin-bottom: 32px !important;
+}
+body.activity-stream .top-sites .top-sites-list .top-site-outer .title {
+	margin-top: 10px !important;
+}
