@@ -36,11 +36,12 @@ The toolbar layout i use:
 
 Any custom css extension will work, below are the instructions for **Stylus**:
 
-1. Go to Stylus > Manage > Write new style > Mozilla Format > Import.
-2. Paste everything from [reddit/mozilla_format.css](reddit/mozilla_format.css).
-3. Press either Overwrite or Append.
-4. Name it whatever you'd like.
-5. Press Save.
+1. Switch to the old (classic) version of Reddit
+2. Go to Stylus > Manage > Write new style > Mozilla Format > Import.
+3. Paste everything from [reddit/mozilla_format.css](reddit/mozilla_format.css).
+4. Press either Overwrite or Append.
+5. Name it whatever you'd like.
+6. Press Save.
 
 # If you have anything to say
 
