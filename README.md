@@ -42,6 +42,7 @@ Windows 10 instructions:
 4. Select [icon/Firefox_Project_Logo,_2019-2.ico](icon/Firefox_Project_Logo,_2019-2.ico).
 5. If pinned, unpin Firefox, restart and repin.
 6. If not, just restart.
+7. If the icon doesn't change, try restarting explorer.exe or relogging.
 
 ## Reddit Theme
 
