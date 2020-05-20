@@ -16,7 +16,8 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 2. Go to about:config, agree that you are responsible for everything horrible you are going to do next.
 3. Set ```toolkit.legacyUserProfileCustomizations.stylesheets``` to ```true```.
 4. Set ```svg.context-properties.content.enabled``` to ```true```.
-5. Restart Firefox.
+5. In the **Customize...** menu, set density to Normal.
+6. Restart Firefox.
 
 ### Optional
 Download and install [Google Sans](https://www.google.com/search?q=Google+Sans).
