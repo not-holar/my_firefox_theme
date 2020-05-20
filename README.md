@@ -33,6 +33,16 @@ The toolbar layout i use:
 2. Set the main settings (important ones are underlined) like so: [Settings Screenshot](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/settings.png).
 3. Scroll down and copy-paste everything from [tree_style_tabs/extra_style_rules.css](tree_style_tabs/extra_style_rules.css) to [here](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/tree_style_tabs/put_css_here.png).
 
+## Taskbar Icon
+
+Windows 10 instructions:
+1. Right-click Firefox in the taskbar.
+2. In the popup, right-click *Firefox*.
+3. Click **Properties** > **Change Icon...** > **Browse...**.
+4. Select [icon/Firefox_Project_Logo,_2019-2.ico](icon/Firefox_Project_Logo,_2019-2.ico).
+5. If pinned, unpin Firefox, restart and repin.
+6. If not, just restart.
+
 ## Reddit Theme
 
 Any custom css extension will work, below are the instructions for **Stylus**:
