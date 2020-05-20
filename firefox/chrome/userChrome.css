@@ -360,17 +360,40 @@ property is anything other than -moz-box */
 	list-style-image: url("img/menu.svg") !important;
 }
 
-:root {
+#urlbar,
+#searchbar {
 	--urlbar-background: hsla(0, 0%, 0%, 0.025);
 }
-:root[lwthemetextcolor="bright"] #urlbar {
+:root[lwthemetextcolor="bright"] #urlbar,
+:root[lwthemetextcolor="bright"] #searchbar {
 	--urlbar-background: hsla(0, 0%, 12%, 0.75);
 }
-#urlbar {
+#urlbar,
+#searchbar {
 	--urlbar-toolbar-height: 36px !important;
 }
 
-#urlbar.megabar > #urlbar-background {
+#searchbar {
+	background: none !important;
+	border: none !important;
+	position: relative;
+	box-shadow: none !important;
+}
+
+#searchbar > * {
+    position: relative !important;
+}
+
+#searchbar::before {
+    content: '';
+	position: absolute !important;
+    display: block;
+    inset: 0;
+    border-radius: var(--toolbarbutton-border-radius);
+}
+
+#urlbar.megabar > #urlbar-background,
+#searchbar::before {
 	background: var(--urlbar-background) !important;
 	background-image: var(--acrylic-background-image) repeat repeat !important;
 	backdrop-filter: var(--acrylic-backdrop-filter) !important;
@@ -403,14 +426,49 @@ property is anything other than -moz-box */
 	padding: 2px !important;
 /* 	  margin-bottom: -1px !important; */
 }
+
+.searchbar-search-icon {
+	padding: 2px;
+}
+
 #connection-icon {
 	padding: 2px !important;
 }
+
+#urlbar-go-button,
+.search-go-button {
+	padding: 7px !important;
+}
+
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
 #urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
 	fill: hsl(155, 50%, 45%) !important;
 }
+
+#PopupSearchAutoComplete {
+	margin-top: 6px !important;
+	padding: 10px !important;
+	box-shadow: inset 0 12px 11px -5px #00000030 !important;
+}
+.search-panel-current-engine {
+	padding-bottom: 10px !important;
+}
+.search-panel-tree {
+	display: grid !important;
+	gap: 10px !important;
+	padding: 10px 0 !important;
+}
+.search-one-offs {
+	padding-top: 5px !important;
+}
+.search-panel-header {
+	padding-bottom: 5px !important;
+}
+.search-panel-container {
+	padding-bottom: 8px !important;
+}
+
 /* .urlbar-textbox-container {
 	padding: 0 9px !important;
 } */
