@@ -17,10 +17,10 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 3. Set ```toolkit.legacyUserProfileCustomizations.stylesheets``` to ```true```.
 4. Set ```svg.context-properties.content.enabled``` to ```true```.
 5. In the **Customize...** menu, set density to Normal.
-6. Restart Firefox.
+6. Download and install [Google Sans](https://www.google.com/search?q=Google+Sans), [Open Sans](https://www.google.com/search?q=Open+Sans) or [Noto Sans](https://www.google.com/search?q=Noto+Sans). Alternatively, remove these two rules: [in userChrome](https://github.com/not-holar/my_firefox_theme/blob/7a2d0e4ec371a283d10a42515422af001ba5b18d/firefox/chrome/userChrome.css#L1-L5), [in userContent](https://github.com/not-holar/my_firefox_theme/blob/7a2d0e4ec371a283d10a42515422af001ba5b18d/firefox/chrome/userContent.css#L7-L9).
+7. Restart Firefox.
 
 ### Optional
-Download and install [Google Sans](https://www.google.com/search?q=Google+Sans).
 
 The toolbar layout i use:
 ![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png)
