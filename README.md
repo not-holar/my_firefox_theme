@@ -25,8 +25,6 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 The toolbar layout i use:
 ![](https://raw.githubusercontent.com/not-holar/my_firefox_theme/master/firefox/toolbar_layout.png)
 
-> The .css files have **a lot** of ~~dead~~ commented out styles, you can lurk around and potentially find something you like, or just remove all of them and minify the files, if that's what you like.
-
 ## Tree Style Tabs
 
 1. [Download Tree Style Tabs from Mozilla.org](https://addons.mozilla.org/en-US/firefox/addon/tree-style-tab/).
