@@ -4,6 +4,10 @@ tab-item .closebox {
 }
 
 tab-item {
+	--tab-surface: hsla(0, 0%, 100%, .05);
+}
+
+tab-item {
 	border: none;
 	outline: 1px solid hsla(0, 0%, 0%, 0.09);
 	--tab-size: 38px !important;
