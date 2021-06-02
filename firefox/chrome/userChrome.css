@@ -154,11 +154,11 @@ scrollbar {
 
 #urlbar,
 #searchbar {
-	--urlbar-background: hsla(0, 0%, 0%, 0.025);
+	--urlbar-background: hsla(0, 0%, 95%, 0.85);
 }
 :root[lwthemetextcolor="bright"] #urlbar,
 :root[lwthemetextcolor="bright"] #searchbar {
-	--urlbar-background: hsla(0, 0%, 12%, 0.75);
+	--urlbar-background: hsla(0, 0%, 12%, 0.9);
 }
 #urlbar,
 #searchbar {
@@ -189,16 +189,18 @@ scrollbar {
 #searchbar::before {
 	background: var(--urlbar-background) !important;
 	background-image: var(--acrylic-background-image) repeat repeat !important;
-	backdrop-filter: var(--acrylic-backdrop-filter) !important;
 	background-blend-mode: var(--acrylic-background-blend-mode) !important;
-	box-shadow: none !important;
+	box-shadow: 0 0 0 transparent, 0 0 0 var(--shadow-color) !important;
+	--shadow-color: hsla(0, 0%, 0%, 0);
 	--toolbarbutton-border-radius: calc(var(--urlbar-height, 30px) / 2);
-	transition: border-color .15s ease;
+	transition: border-color .15s ease, box-shadow .15s ease;
 	animation-duration: 150ms !important;
 }
 
-#urlbar:not([breakout-extend]) > #urlbar-background {
-	border: transparent !important;
+#urlbar[open] > #urlbar-background {
+	box-shadow: 0 3px 5px var(--shadow-color), 0 10px 9px var(--shadow-color) !important;
+	backdrop-filter: var(--acrylic-backdrop-filter) !important;
+	--shadow-color: hsla(0, 0%, 0%, .1);
 }
 
 #urlbar-input-container,
@@ -242,6 +244,9 @@ scrollbar {
     height: 100% !important;
 }
 
+#urlbar #star-button {
+    list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
+}
 .urlbarView-row-inner {
     padding-inline-start: calc(var(--urlbar-icon-size) + 2 * var(--urlbar-icon-padding) + var(--identity-box-margin-inline) - 15px) !important;
     border-radius: 8px !important;
