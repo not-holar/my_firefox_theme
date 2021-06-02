@@ -62,6 +62,10 @@ scrollbar {
 			REMOVE TAB BAR - START
 */
 
+#navigator-toolbox {
+	position: relative !important;
+}
+
 :root[sizemode="maximized"][tabsintitlebar="true"] #navigator-toolbox {
 	margin-top: 8px;
 }
@@ -79,27 +83,27 @@ scrollbar {
 
 /* Workaround v2 (Since #nav-bar is bad at laying out children (it doesnt respect ::after's width on small window widths), just make it get out of the way)*/
 :root[tabsintitlebar="true"] #nav-bar {
-	margin-right: max(150px, calc(100vw / 6.6)) !important;
-
-	background: none !important;
-}
-/* Then move the background to the parent to preserve proper look */
-:root[tabsintitlebar="true"] #navigator-toolbox {
-	background-color: var(--toolbar-bgcolor);
-	background-image: var(--toolbar-bgimage);
-	background-clip: padding-box;
+	padding-right: max(150px, calc(100vw / 6.6)) !important;
 }
 
 #titlebar {
-	padding: 0 !important;
 	-moz-appearance: none !important;
-	position: fixed !important;
-	left: 0 !important;
-	right: 0 !important;
-	height: 40px !important;
+	position: absolute !important;
+	inset: 2px;
 	display: flex !important;
 	align-items: center;
 	justify-content: end;
+	padding: 0 !important;
+
+	pointer-events: none;
+}
+
+#titlebar > * {
+	pointer-events: auto;
+}
+
+.titlebar-button {
+    padding: 8px 13px !important;
 }
 
 
@@ -121,28 +125,10 @@ scrollbar {
 
 #back-button,
 #forward-button {
-	padding-left: 0 !important;
-	padding-right: 0 !important;
 	padding: 0 !important;
-}
-#back-button > .toolbarbutton-icon,
-#forward-button > .toolbarbutton-icon {
-	padding: 6px !important;
-	border: none !important;
-	box-shadow: none !important;
 }
 #back-button > .toolbarbutton-icon {
 	list-style-image: url("img/back.svg") !important;
-}
-:root:not([uidensity="compact"]) #nav-bar #back-button > .toolbarbutton-icon {
-	--backbutton-background: transparent;
-	background-origin: unset !important;
-	background-clip: unset !important;
-	border: unset !important;
-	transition: unset !important;
-	width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-	padding: var(--toolbarbutton-inner-padding) !important;
-	border-radius: var(--toolbarbutton-border-radius) !important;
 }
 #forward-button > .toolbarbutton-icon {
 	list-style-image: url("img/forward.svg") !important;
@@ -153,13 +139,16 @@ scrollbar {
 #history-panelmenu {
 	list-style-image: url("img/history.svg") !important;
 }
+#downloads-indicator-icon {
+	list-style-image: url("img/downloads.svg") !important;
+}
 #bookmarks-menu-button > .toolbarbutton-icon {
 	list-style-image: url("img/bookmarks.svg") !important;
 }
 #nav-bar-overflow-button > .toolbarbutton-icon {
 	list-style-image: url("img/overflow.svg") !important;
 }
-#PanelUI-menu-button > .toolbarbutton-icon {
+#PanelUI-menu-button {
 	list-style-image: url("img/menu.svg") !important;
 }
 
@@ -174,7 +163,7 @@ scrollbar {
 #urlbar,
 #searchbar {
 	--urlbar-height: var(--urlbar-height, 30px); /* The browser should take care of this, but just incase, this is the default */
-	--urlbar-toolbar-height: 36px !important;
+	--urlbar-toolbar-height: var(--urlbar-container-height) !important;
 }
 
 #searchbar {
@@ -212,38 +201,58 @@ scrollbar {
 	border: transparent !important;
 }
 
-#urlbar-input-container, #searchbar {
-	padding-right: 5px !important;
-	padding-left: 5px !important;
+#urlbar-input-container,
+#searchbar {
+	--padding-inline: 14px;
+	padding-inline: var(--padding-inline) !important;
 }
 
 #urlbar[breakout][breakout-extend] > #urlbar-input-container {
-	padding-right: 12px !important;
-	padding-left: 12px !important;
+	padding-inline: calc(var(--padding-inline) + 5px) !important;
 }
 
-#identity-box[pageproxystate="invalid"] > #identity-icon {
-	box-sizing: border-box !important;
-	padding: 2px !important;
+:root {
+	--urlbar-icon-size: 14px !important;
+	--urlbar-icon-padding: 4px !important;
+	--identity-box-margin-inline: 8px !important;
+}
+
+.sharing-icon,
+#identity-icon,
+#permissions-granted-icon,
+#tracking-protection-icon,
+.notification-anchor-icon,
+#blocked-permissions-container > .blocked-permission-icon,
+#tracking-protection-icon-box,
+.searchbar-search-icon {
+	width: var(--urlbar-icon-size) !important;
+	height: unset !important;
+	aspect-ratio: 1;
+}
+
+.searchbar-search-button[addengines="true"] > .searchbar-search-icon-overlay {
+	width: 9px !important;
+	height: unset !important;
+	aspect-ratio: 1;
+	margin: -4px 0 0 -13px !important;
+}
+
+.urlbar-icon {
+    width: calc(14px + 2 * var(--urlbar-icon-padding)) !important;
+    height: 100% !important;
+}
+
+.urlbarView-row-inner {
+    padding-inline-start: calc(var(--urlbar-icon-size) + 2 * var(--urlbar-icon-padding) + var(--identity-box-margin-inline) - 15px) !important;
+    border-radius: 8px !important;
+}
+
+.searchbar-search-button {
+	margin-inline-end: var(--identity-box-margin-inline);
 }
 
 .searchbar-search-icon {
-	padding: 2px;
-}
-
-#connection-icon {
-	padding: 2px !important;
-}
-
-#urlbar-go-button,
-.search-go-button {
-	padding: 7px !important;
-}
-
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain > #connection-icon,
-#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #connection-icon,
-#urlbar[pageproxystate="valid"] > #identity-box.mixedActiveBlocked > #connection-icon {
-	fill: hsl(155, 50%, 45%) !important;
+	margin: 0 !important;
 }
 
 #PopupSearchAutoComplete {
@@ -268,7 +277,6 @@ scrollbar {
 .search-panel-container {
 	padding-bottom: 8px !important;
 }
-
 
 .bookmark-item > .menu-text,
 .bookmark-item > .menu-iconic-text {
