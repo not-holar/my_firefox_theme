@@ -12,7 +12,8 @@ Welcome to the repo for my Firefox theme, a theme that aims to look nice and cle
 
 > **Recommended**: install the Tree Style Tabs extension first before you do this as the theme will hide the tab bar.
 
-1. Copy the files from [firefox/chrome](firefox/chrome) into the ```chrome``` folder (doesn't exist by default) in your Firefox profile directory. To find your profile directory, go to about:support.
+1. Copy the files from [firefox/chrome](firefox/chrome) into the ```chrome``` folder (doesn't exist by default) in your Firefox profile directory. To find your profile directory, go to about:support.  
+*Alternatively*: Download using Github Desktop and symlink from the project/chrome folder to your profile/chrome folder, this will make updating the theme as easy as just pressing "Pull origin"
 2. Go to about:config, agree that you are responsible for everything horrible you are going to do next.
 3. Set ```toolkit.legacyUserProfileCustomizations.stylesheets``` to ```true```.
 4. Set ```svg.context-properties.content.enabled``` to ```true```.
