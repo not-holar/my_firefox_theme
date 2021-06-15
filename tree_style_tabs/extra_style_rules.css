@@ -649,14 +649,20 @@ tab-item > * {
 	padding-inline: 0 !important;
 }
 
-.newtab-button::before {
+/* .newtab-button::before {
 	height: 12px;
 	width: 12px;
 	margin: 11px;
-}
+} */
 
+.newtab-button-box > * {
+    padding-block: 4px !important;
+}
+.newtab-button::after {
+	background-size: 11px !important;
+}
 #tabbar {
-	bottom: 36px !important;
+	bottom: 27px !important;
 }
 
 tab-item::before {
