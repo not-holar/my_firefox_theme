@@ -9,11 +9,11 @@
 }
 
 :root {
-	scrollbar-color: hsla(0, 0%, 33%, 0.5) hsla(0, 0%, 0%, 0.1) !important;
+	scrollbar-color: hsla(0, 0%, 33%, 0.5) hsla(0, 0%, 0%, 0.1);
 }
 
 :root, * {
-	scrollbar-width: thin !important;
+	scrollbar-width: thin;
 }
 
 /* :root::before {
@@ -33,12 +33,12 @@
 } */
 
 scrollbar {
-	scrollbar-color: hsla(0, 0%, 33%, 0.5) transparent !important;
-	scrollbar-width: thin !important;
+	scrollbar-color: hsla(0, 0%, 33%, 0.5) transparent;
+	scrollbar-width: thin;
 	background-color: hsla(0, 0%, 0%, 0.1);
-	background-image: var(--acrylic-background-image) repeat repeat !important;
-	backdrop-filter: var(--acrylic-backdrop-filter) !important;
-	background-blend-mode: var(--acrylic-background-blend-mode) !important;
+	background-image: var(--acrylic-background-image);
+	backdrop-filter: var(--acrylic-backdrop-filter);
+	background-blend-mode: var(--acrylic-background-blend-mode);
 }
 
 /* for about:'pages')*/
@@ -59,12 +59,12 @@ scrollbar {
 		word-spacing: .25em;
 	}
 	body.sans-serif {
-		font-family: 'Open Sans', 'Noto Sans', Arial, sans-serif !important;
+		/* font-family: 'Open Sans', 'Noto Sans', Arial, sans-serif; */
 		line-height: 1.5em;
 	}
-	body.serif {
+	/* body.serif {
 		font-family: serif, 'Book Antiqua' !important;
-	}
+	}*/
 	body.sans-serif, body.serif {
 		padding-bottom: 75vh !important;
 	}
