@@ -33,9 +33,7 @@ scrollbar {
 	scrollbar-color: hsla(0, 0%, 33%, 0.5) hsla(0, 0%, 0%, 0) !important;
 	scrollbar-width: thin !important;
 	background-color: hsla(0, 0%, 0%, 0.1);
-	background-image: var(--acrylic-background-image) repeat repeat !important;
 	backdrop-filter: var(--acrylic-backdrop-filter) !important;
-	background-blend-mode: var(--acrylic-background-blend-mode) !important;
 }
 
 /*
@@ -188,8 +186,6 @@ scrollbar {
 #urlbar > #urlbar-background,
 #searchbar::before {
 	background: var(--urlbar-background) !important;
-	background-image: var(--acrylic-background-image) repeat repeat !important;
-	background-blend-mode: var(--acrylic-background-blend-mode) !important;
 	box-shadow: 0 0 0 transparent, 0 0 0 var(--shadow-color) !important;
 	--shadow-color: hsla(0, 0%, 0%, 0);
 	--toolbarbutton-border-radius: calc(var(--urlbar-height, 30px) / 2);
