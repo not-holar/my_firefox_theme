@@ -547,7 +547,7 @@ tab-item {
 	--tab-surface: hsla(0, 0%, 100%, .05);
 }
 
-tab-item {
+tab-item > tab-item-substance {
 	border: none;
 	outline: 1px solid hsla(0, 0%, 0%, 0.09);
 	--tab-size: 38px !important;
@@ -566,7 +566,7 @@ tab-item.unread {
 	opacity: .5;
 }
 
-tab-item.pinned {
+tab-item.pinned > tab-item-substance {
 	padding: unset !important;
 }
 
@@ -587,7 +587,7 @@ tab-item.pinned {
 		inset 0  1px  5px  0   rgba(0,0,0,0.20) !important;
 }
 
-tab-item.active:not(.pinned) {
+tab-item.active:not(.pinned) > tab-item-substance {
 	padding-right: 10px !important;
 	margin-right: 2px !important;
 }
@@ -602,7 +602,7 @@ tab-item.active {
 		0  1px  5px  0   rgba(0,0,0,0.20) !important;
 }
 
-tab-item.active::after {
+tab-item.active > tab-item-substance::after {
 	width: 10px;
 	background: currentcolor;
 	opacity: .5;
@@ -612,29 +612,29 @@ tab-item.active::after {
 	left: unset;
 }
 
-tab-item.active.pinned::after {
+tab-item.active.pinned > tab-item-substance::after {
 	width: 50%;
 }
 
-tab-item.active > :nth-child(8),
-tab-item > :nth-child(8)::before,
-tab-item > :nth-child(8)::after {
+tab-item.active > tab-item-substance > :nth-child(8),
+tab-item > tab-item-substance > :nth-child(8)::before,
+tab-item > tab-item-substance > :nth-child(8)::after {
 	display: none !important;
 }
-tab-item > tab-favicon {
+tab-item > tab-item-substance > tab-favicon {
 	order: 1;
 }
-tab-item > tab-label {
+tab-item > tab-item-substance > tab-label {
 	order: 2;
 }
-tab-item > tab-sound-button {
+tab-item > tab-item-substance > tab-sound-button {
 	grid-area: sound;
 	order: 3;
 }
-tab-item > tab-counter {
+tab-item > tab-item-substance > tab-counter {
 	order: 4;
 }
-tab-item > tab-twisty {
+tab-item > tab-item-substance > tab-twisty {
 	order: 99 !important;
 	position: unset;
 	display: block;
@@ -644,7 +644,7 @@ tab-item.pinned tab-twisty,
 tab-item.collapsed tab-twisty {
 	display: none !important;
 }
-tab-item > * {
+tab-item > tab-item-substance > * {
 	margin: 0 !important;
 	padding-inline: 0 !important;
 }
@@ -665,7 +665,7 @@ tab-item > * {
 	bottom: 27px !important;
 }
 
-tab-item::before {
+tab-item > tab-item-substance::before {
 	content: var(--overlay-content);
 	background: var(--overlay-color);
 	position: absolute;
