@@ -544,6 +544,7 @@ tab-item .closebox {
 }
 
 tab-item {
+	overflow: visible !important;
 	--tab-surface: hsla(0, 0%, 100%, .05);
 }
 
@@ -591,7 +592,7 @@ tab-item.active:not(.pinned) > tab-item-substance {
 	padding-right: 10px !important;
 	margin-right: 2px !important;
 }
-tab-item.active {
+tab-item.active > tab-item-substance {
 	z-index: 100;
 	box-shadow: 
 		0 24px 38px  3px rgba(0,0,0,0.14),
@@ -664,7 +665,9 @@ tab-item > tab-item-substance > * {
 #tabbar {
 	bottom: 27px !important;
 }
-
+tab-item > tab-item-substance {
+	position: relative !important;
+}
 tab-item > tab-item-substance::before {
 	content: var(--overlay-content);
 	background: var(--overlay-color);
