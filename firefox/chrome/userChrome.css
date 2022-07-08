@@ -36,89 +36,66 @@ scrollbar {
 	backdrop-filter: var(--acrylic-backdrop-filter) !important;
 }
 
-/*
-			TREE STYLE TABS - START
-*/
+/* TREE STYLE TABS */
+@media all {
+	/* Reduce minimum width of the sidebar */
+	#sidebar {
+		min-width: 100px !important;
+	}
 
-/* Reduce minimum width of the sidebar */
-#sidebar {
-  min-width: 100px !important;
+	/* Hide sidebar header when using Tree Style Tab. */
+	#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
+		visibility: collapse;
+	}
 }
 
-/* Hide sidebar header when using Tree Style Tab. */
-#sidebar-box[sidebarcommand="treestyletab_piro_sakura_ne_jp-sidebar-action"] #sidebar-header {
-	visibility: collapse;
+/* REMOVE TAB BAR */
+@media all {
+	/* :root[sizemode="maximized"][tabsintitlebar="true"] #navigator-toolbox {
+		margin-top: 8px;
+	} */
+	#titlebar {
+		-moz-appearance: none !important;
+	}
+	#TabsToolbar {
+		visibility: collapse !important;
+	}
 }
-
-/*
-			TREE STYLE TABS - END
-*/
-
-
-
-/*
-			REMOVE TAB BAR - START
-*/
-
-#navigator-toolbox {
-	position: relative !important;
-}
-
-:root[sizemode="maximized"][tabsintitlebar="true"] #navigator-toolbox {
-	margin-top: 8px;
-}
-
-#toolbar-menubar,
-#TabsToolbar > :not(.titlebar-buttonbox-container):not(.private-browsing-indicator) {
-	visibility: collapse !important;
-}
-
-.private-browsing-indicator {
-	background-size: 69%;
-	margin-inline-end: 6px;
-	opacity: 0.7;
-}
-
-/* Workaround v2 (Since #nav-bar is bad at laying out children (it doesnt respect ::after's width on small window widths), just make it get out of the way)*/
-:root[tabsintitlebar="true"] #nav-bar {
-	padding-right: max(150px, calc(100vw / 6.6)) !important;
-}
-
-#titlebar {
-	-moz-appearance: none !important;
-	position: absolute !important;
-	inset: 2px;
-	display: flex !important;
-	align-items: center;
-	justify-content: end;
-	padding: 0 !important;
-
-	pointer-events: none;
-}
-
-#titlebar > * {
-	pointer-events: auto;
-}
-
-.titlebar-button {
-    padding: 8px 13px !important;
-}
-
-
-/*
-			REMOVE TAB BAR - END
-*/
 
 #navigator-toolbox:-moz-lwtheme {
 	--tabs-border-color: rgba(0,0,0,.1) !important;
 }
 
 #nav-bar {
-	padding: 2px !important;
+	/* display: flex; */
+	padding: 2px calc(2px + var(--toolbar-start-end-padding)) !important;
 	font-size: 10px !important;
 }
-#nav-bar-customization-target {
-	padding-left: 5px !important;
+/* #nav-bar-customization-target {
+	flex: 1;
+} */
+#nav-bar > * {
+	--toolbar-start-end-padding: 2px;
+}
+
+/* MOVE OVERFLOW AND HAMBURGER MENU TO THE LEFT */
+@media not all {
+	/* #nav-bar {
+		flex-direction: row-reverse;
+	} */
+	#nav-bar-customization-target {
+		-moz-box-ordinal-group: 100;
+	}
+	#nav-bar-overflow-button {
+		-moz-box-ordinal-group: 99;
+	}
+	/* moving overflow button to the left breaks the Customize screen, rules below fix it */
+	#customization-panelWrapper {
+		--panel-arrow-offset: 46px !important; 
+	}
+	/* #customization-panelWrapper > .panel-arrowbox {
+		display: none;
+	} */
 }
 
 #back-button,
@@ -152,12 +129,9 @@ scrollbar {
 
 #urlbar,
 #searchbar {
-	--urlbar-background: hsla(0, 0%, 95%, 0.85);
+	--toolbar-field-background-color: color-mix(in srgb, var(--toolbar-field-background-color) 85%, gray 0%);
 }
-:root[lwthemetextcolor="bright"] #urlbar,
-:root[lwthemetextcolor="bright"] #searchbar {
-	--urlbar-background: hsla(0, 0%, 12%, 0.9);
-}
+
 #urlbar,
 #searchbar {
 	--urlbar-height: var(--urlbar-height, 30px); /* The browser should take care of this, but just incase, this is the default */
@@ -185,7 +159,6 @@ scrollbar {
 
 #urlbar > #urlbar-background,
 #searchbar::before {
-	background: var(--urlbar-background) !important;
 	box-shadow: 0 0 0 transparent, 0 0 0 var(--shadow-color) !important;
 	--shadow-color: hsla(0, 0%, 0%, 0);
 	--toolbarbutton-border-radius: calc(var(--urlbar-height, 30px) / 2);

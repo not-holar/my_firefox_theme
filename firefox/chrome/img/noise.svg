@@ -1,0 +1,15 @@
+<svg xmlns='http://www.w3.org/2000/svg'
+	xmlns:xlink='http://www.w3.org/1999/xlink' width='360' height='360' viewbox="0 0 720 720">
+
+	<filter id='filter'>
+		<feTurbulence type="fractalNoise" result="myTurbulence" baseFrequency="0.5" numOctaves="5" seed="620384893" />
+		<feColorMatrix in="myTurbulence" type="matrix" values="
+			0.5  0.5   0    0  -100
+			0.5  0.5   0    0  -100
+			0.5  0.5   0    0  -100
+			 0    0   0.1   0    0
+		"/>
+	</filter>
+
+	<rect width='720' height='720' filter="url(#filter)"/>
+</svg>
