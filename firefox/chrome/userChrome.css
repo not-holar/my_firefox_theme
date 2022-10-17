@@ -62,6 +62,47 @@ scrollbar {
 	}
 }
 
+
+
+
+#navigator-toolbox {
+	display: grid;
+	grid-template-columns: [navbar] 1fr [buttons] max-content;
+}
+
+#titlebar {
+	grid-column: buttons;
+	display: block;
+}
+
+#nav-bar {
+	grid-column: navbar;
+	grid-row: 1;
+}
+
+#toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]),
+#toolbar-menubar {
+	height: 100% !important;
+}
+
+#toolbar-menubar > :not(.titlebar-buttonbox-container) {
+	visibility: collapse;
+}
+
+#titlebar {
+	overflow: 99999;
+}
+
+#nav-bar {
+	border-radius: 0 50px 50px 0;
+	border-inline-end: 5px solid transparent;
+}
+
+#PanelUI-button {
+	--toolbar-start-end-padding: 7px !important;
+}
+
+
 #navigator-toolbox:-moz-lwtheme {
 	--tabs-border-color: rgba(0,0,0,.1) !important;
 }
@@ -127,9 +168,15 @@ scrollbar {
 	list-style-image: url("img/menu.svg") !important;
 }
 
-#urlbar,
-#searchbar {
-	--toolbar-field-background-color: color-mix(in srgb, var(--toolbar-field-background-color) 85%, gray 0%);
+@media not all {
+	#urlbar-background,
+	#searchbar {
+		background-color: color-mix(in srgb, var(--toolbar-field-background-color) 85%, gray 0%) !important;
+	}
+	#urlbar:is([focused="true"], [open]) > #urlbar-background,
+	#searchbar:focus-within {
+		background-color: color-mix(in srgb, var(--toolbar-field-focus-background-color) 85%, gray 0%) !important;
+	}
 }
 
 #urlbar,
